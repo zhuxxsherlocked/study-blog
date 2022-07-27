@@ -1,0 +1,1 @@
+docker build -t study:1.0.0 .
