@@ -9,7 +9,7 @@ re_compile = re.compile(r']\((?P<rout>.*?)\)')
 
 bookNames = []
 bookRoutes = []
-with open('_sidebar.md', 'r') as router:
+with open('_sidebar.md', 'r', encoding='utf-8') as router:
     n = 0
     for readline in router:
         if readline.startswith("-") and readline != '- [ABook](ABook.md)\n':
@@ -24,7 +24,7 @@ with open('_sidebar.md', 'r') as router:
             n = 0
 
 # 覆写Abook.md文件
-with open("ABook.md", "w") as readme:
+with open("ABook.md", "w", encoding='utf-8') as readme:
     readme.write("# A-Book\n")
     for a in range(len(bookRoutes)):
-        readme.write(f"{a+1}. [{bookNames[a].strip()}]({bookRoutes[a]})\n")
+        readme.write(f"{a + 1}. [{bookNames[a].strip()}]({bookRoutes[a]})\n")
