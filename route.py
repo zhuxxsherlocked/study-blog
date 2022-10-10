@@ -2,8 +2,8 @@ import os
 import re
 
 # 重新生成_sidebar.md
-os.remove("_sidebar.md")
-os.system("docsify generate .")
+# os.remove("_sidebar.md")
+# os.system("docsify generate .")
 
 re_compile = re.compile(r']\((?P<rout>.*?)\)')
 
